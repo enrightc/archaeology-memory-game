@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100dvh;
+    background: rgb(224, 245, 176);
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 850px;
+    height: 900px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    perspective: 1000px;
+    
+}
+
+.memory-card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/6; 
+    position: relative;
+    transform: scale(1); 
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.memory-card:active {
+    transform: scale(.9);
+    transition: transform .2s ease;
+}
+
+.front-face, 
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
