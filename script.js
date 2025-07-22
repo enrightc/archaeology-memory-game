@@ -100,3 +100,4 @@ function showEndGamePopup() {
 
 // This line adds a click event listener to every card in the cards list. So when you click a card, it will run the flipCard function.
 cards.forEach(card => card.addEventListener('click', flipCard))
+

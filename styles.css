@@ -13,13 +13,12 @@ body {
 }
 
 main {
-    width: 850px;
+    width: 100%;
     height: 900px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    perspective: 1000px;
-    
+    perspective: 1000px; 
 }
 
 .memory-card {
@@ -48,7 +47,6 @@ main {
     overflow: hidden;
 }
 
-
 .memory-card.flip {
     transform: rotateY(180deg);
 }
@@ -57,3 +55,35 @@ main {
     transform: rotateY(180deg);
 }
 
+.game-wrapper {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#click-counter {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+@media screen and (max-width: 728px) {
+    main {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        grid-template-rows: auto;
+        gap: 0.5rem;
+        max-width: 100%;
+    }
+    
+    .memory-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 6;
+    }
+}
