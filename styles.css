@@ -74,7 +74,7 @@ main {
         width: 100%;
         height: auto;
         padding: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(80px, 80px));
         grid-template-rows: auto;
         max-width: 100%;
     }
@@ -85,4 +85,5 @@ main {
         height: auto;
         aspect-ratio: 4 / 6;
     }
+    
 }
