@@ -76,7 +76,10 @@ main {
         padding: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(80px, 80px));
         grid-template-rows: auto;
+        justify-content: center;
         max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .memory-card {
@@ -85,5 +88,4 @@ main {
         height: auto;
         aspect-ratio: 4 / 6;
     }
-    
 }
